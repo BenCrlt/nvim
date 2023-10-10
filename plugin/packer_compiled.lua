@@ -194,6 +194,11 @@ _G.packer_plugins = {
     path = "/home/benoit/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-treesitter-textobjects"] = {
+    loaded = true,
+    path = "/home/benoit/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
+  },
   ["nvim-ts-autotag"] = {
     load_after = {},
     loaded = true,

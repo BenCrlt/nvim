@@ -13,7 +13,14 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
-	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+	use("nvim-treesitter/nvim-treesitter-textobjects")
+
+	use(
+		"nvim-treesitter/nvim-treesitter",
+		{ run = ":TSUpdate", requires = {
+			"nvim-treesitter/nvim-treesitter-textobjects",
+		} }
+	)
 
 	-- auto-completion
 	use({ "hrsh7th/nvim-cmp" })
@@ -79,4 +86,6 @@ return require("packer").startup(function(use)
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
 	use("theprimeagen/harpoon")
+
+	use("sindrets/diffview.nvim")
 end)

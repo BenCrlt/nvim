@@ -24,3 +24,8 @@ keymap.set("n", "<C-z>", "u")
 keymap.set("n", "<C-q>", ":q<CR>")
 
 keymap.set("n", "<C-g>", ":Neogit<CR>")
+
+keymap.set("n", "<leader>df", ":DiffviewFileHistory %<CR>")
+keymap.set("n", "<leader>da", ":DiffviewFileHistory<CR> ")
+keymap.set("n", "<leader>dg", ":DiffviewFileHistory<CR> ")
+keymap.set("n", "<leader>dc", ":DiffviewClose<CR>")
