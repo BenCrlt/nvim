@@ -85,7 +85,9 @@ return require("packer").startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
-	use("theprimeagen/harpoon")
-
 	use("sindrets/diffview.nvim")
+
+	use("github/copilot.vim")
+
+	use("romgrk/barbar.nvim")
 end)
