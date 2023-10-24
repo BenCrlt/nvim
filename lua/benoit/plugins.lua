@@ -37,8 +37,8 @@ return require("packer").startup(function(use)
 	use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
 
 	-- formating and linting
-	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
-	use("jayp0521/mason-null-ls.nvim")
+	use("stevearc/conform.nvim", { event = { "BufReadPre", "BufNewFile" } })
+	use("mfussenegger/nvim-lint", { event = { "BufReadPre", "BufNewFile" } })
 
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig") -- easily configure language servers
