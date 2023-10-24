@@ -13,7 +13,7 @@ map("n", "<leader>é", "<Cmd>BufferNext<CR>", opts)
 -- Pin/unpin buffer
 map("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
 -- Close buffer
-map("n", "<C-q>", "<Cmd>BufferClose<CR>", opts)
+map("n", "<leader>q&", "<Cmd>BufferClose<CR>", opts)
 map("n", "<leader>qa", "<Cmd>BufferCloseAllButCurrentOrPinned<CR>", opts)
 
 -- Wipeout buffer

@@ -74,6 +74,7 @@ return require("packer").startup(function(use)
 	use("christoomey/vim-tmux-navigator")
 
 	use("Mofiqul/dracula.nvim")
+	use("folke/tokyonight.nvim")
 
 	--status line
 	use("nvim-lualine/lualine.nvim")

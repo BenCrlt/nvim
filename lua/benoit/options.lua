@@ -17,7 +17,7 @@ opt.ignorecase = true
 opt.smartcase = true
 
 --cursor line
-opt.cursorline = true
+--opt.cursorline = true
 
 -- appearandce
 opt.termguicolors = true

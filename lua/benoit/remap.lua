@@ -23,7 +23,7 @@ keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>")
 keymap.set("n", "<C-s>", ":w<CR>")
 keymap.set("n", "<leader>b", "<C-z>")
 keymap.set("n", "<C-z>", "u")
-keymap.set("n", "<C-Q>", ":q<CR>")
+keymap.set("n", "<C-q>", ":q<CR>")
 
 keymap.set("n", "<C-g>", ":Neogit<CR>")
 
