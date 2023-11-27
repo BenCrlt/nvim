@@ -6,6 +6,8 @@ vim.cmd([[packadd packer.nvim]])
 return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
+
+	use("nvim-tree/nvim-web-devicons")
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.3",
@@ -44,8 +46,8 @@ return require("packer").startup(function(use)
 	use("neovim/nvim-lspconfig") -- easily configure language servers
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
 	use({
-		"glepnir/lspsaga.nvim",
-		branch = "main",
+		"nvimdev/lspsaga.nvim",
+		after = "nvim-lspconfig",
 		requires = {
 			{ "nvim-tree/nvim-web-devicons" },
 			{ "nvim-treesitter/nvim-treesitter" },
@@ -58,6 +60,18 @@ return require("packer").startup(function(use)
 		"nvim-tree/nvim-tree.lua",
 		requires = {
 			"nvim-tree/nvim-web-devicons", -- optional
+		},
+	})
+
+	-- Database managment
+	use({
+		"kristijanhusak/vim-dadbod-ui",
+		requires = {
+			{ "tpope/vim-dadbod" },
+			{
+				"kristijanhusak/vim-dadbod-completion",
+				ft = { "sql", "mysql", "plsql" },
+			},
 		},
 	})
 
@@ -75,9 +89,13 @@ return require("packer").startup(function(use)
 
 	use("Mofiqul/dracula.nvim")
 	use("folke/tokyonight.nvim")
+	use("rose-pine/neovim")
+	use("shaunsingh/nord.nvim")
+	use("AlexvZyl/nordic.nvim")
+	use("catppuccin/nvim")
 
 	--status line
-	use("nvim-lualine/lualine.nvim")
+	use({ "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons" } })
 
 	-- auto closing
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
@@ -86,9 +104,36 @@ return require("packer").startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+	use({
+		"VonHeikemen/fine-cmdline.nvim",
+		requires = {
+			{ "MunifTanjim/nui.nvim" },
+		},
+	})
+
 	use("sindrets/diffview.nvim")
 
 	use("github/copilot.vim")
 
-	use("romgrk/barbar.nvim")
+	use("folke/which-key.nvim")
+
+	use("wellle/targets.vim")
+
+	use({ "romgrk/barbar.nvim", requires = { "nvim-tree/nvim-web-devicons" } })
+
+	-- DEBUGGING
+	use("mfussenegger/nvim-dap")
+	use({ "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } })
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	use("theHamsta/nvim-dap-virtual-text")
+
+	use("folke/neodev.nvim")
+	use("xiyaowong/transparent.nvim")
+
+	use({
+		"VonHeikemen/fine-cmdline.nvim",
+		requires = {
+			{ "MunifTanjim/nui.nvim" },
+		},
+	})
 end)

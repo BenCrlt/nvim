@@ -40,6 +40,7 @@ cmp.setup({
 		{ name = "lucasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
+		{ name = "vim-dadbod-completion" },
 	}),
 	-- configure lspkind for vs-code like icons
 	formatting = {

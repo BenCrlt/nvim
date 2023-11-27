@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("i", "lk", "<ESC>")
+keymap.set("i", "<C-s>", "<ESC>")
 
 keymap.set("n", "<leader>sv", "<C-w>v")
 keymap.set("n", "<leader>sh", "<C-w>h")
@@ -21,7 +21,7 @@ keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>")
 keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>")
 
 keymap.set("n", "<C-s>", ":w<CR>")
-keymap.set("n", "<leader>b", "<C-z>")
+keymap.set("n", "<leader>fg", "<C-z>")
 keymap.set("n", "<C-z>", "u")
 keymap.set("n", "<C-q>", ":q<CR>")
 
@@ -31,3 +31,5 @@ keymap.set("n", "<leader>df", ":DiffviewFileHistory %<CR>")
 keymap.set("n", "<leader>da", ":DiffviewFileHistory<CR> ")
 keymap.set("n", "<leader>dg", ":DiffviewFileHistory<CR> ")
 keymap.set("n", "<leader>dc", ":DiffviewClose<CR>")
+
+keymap.set("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })

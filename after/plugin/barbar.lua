@@ -1,6 +1,19 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
+local barbar = require("barbar")
+
+barbar.setup({
+	animation = true,
+
+	auto_hide = false,
+	tabpages = true,
+	clickable = true,
+
+	-- Set the filetypes which barbar will offset itself for
+	no_name_title = "Empty Buffer",
+})
+
 -- Move to previous/next
 map("n", "<leader>&", "<Cmd>BufferPrevious<CR>", opts)
 map("n", "<leader>é", "<Cmd>BufferNext<CR>", opts)
