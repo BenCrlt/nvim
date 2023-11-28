@@ -55,6 +55,7 @@ return require("packer").startup(function(use)
 	}) -- enhanced lsp uis
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+	use("ray-x/lsp_signature.nvim")
 
 	use({
 		"nvim-tree/nvim-tree.lua",
